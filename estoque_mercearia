@@ -1,0 +1,23 @@
+using estoque;
+{
+    Console.WriteLine("<< Sistema de Estoque do Supermercado Menor Preço >>");
+    Console.Write("\n");
+    
+    EstoqueMercearia produto1 = new EstoqueMercearia();
+    produto1.nome = "Leite";
+    produto1.fabricante = "Itambé";
+    produto1.código_de_barras = 0000001001;
+    produto1.valor_compra = 4.63;
+    produto1.valor_de_venda = 9.69;
+    produto1.quantidade_estoque = 25;
+    produto1.data_compra = "15/03";
+
+    Console.WriteLine("Nome: " + produto1.nome);
+    Console.WriteLine("Fabricante: " + produto1.fabricante);
+    Console.WriteLine("Código de Barras: " + produto1.código_de_barras);
+    Console.WriteLine("Valor de Compra: " + produto1.valor_compra);
+    Console.WriteLine("Valor de Venda: " + produto1.valor_de_venda);
+    Console.WriteLine("Estoque: "+ produto1.quantidade_estoque);
+    Console.WriteLine("Data da Compra: " + produto1.data_compra);
+}
+Console.ReadKey();
