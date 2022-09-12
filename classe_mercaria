@@ -1,0 +1,14 @@
+namespace estoque
+{
+    public class EstoqueMercearia
+    {
+        public string nome;
+        public string fabricante;
+        public double código_de_barras;
+        public double valor_compra;
+        public double valor_de_venda;
+        public double quantidade_estoque;
+        public string data_compra;
+    }
+
+}
