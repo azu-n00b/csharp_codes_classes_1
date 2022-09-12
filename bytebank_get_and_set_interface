@@ -1,0 +1,12 @@
+using bytebank;
+using bytebank.titular;
+
+{
+    {
+        ContaCorrente conta4 = new ContaCorrente();
+        conta4.Saldo = -150;
+
+        Console.WriteLine("Saldo: " + conta4.Saldo);
+    }
+}
+Console.ReadKey();
