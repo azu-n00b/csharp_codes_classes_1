@@ -1,0 +1,87 @@
+using bytebank.titular;
+
+namespace bytebank
+{
+    public class ContaCorrente
+    {
+        public Cliente titular;
+        public string conta;
+        public float numero_agencia;
+        public string nome_agencia;
+        private float saldo;
+        public bool verificador;
+
+        public bool Sacar (float valor)
+        {
+            if (saldo < valor)
+            {
+                return false;
+            }
+            if (valor < 0)
+            {
+                return false;
+            }
+            else
+            {
+                saldo = saldo - valor;
+                return true;
+            }
+        }
+        public void Depositar (float valor)
+        {
+            saldo = saldo + valor;
+        }
+        public bool Transferir (float valor, ContaCorrente destino)
+        {
+            if (saldo < valor)
+            {
+                return false;
+            }
+            if (valor < 0)
+            {
+                return false;
+            }
+            else
+            {
+                saldo = saldo - valor;
+                destino.saldo = destino.saldo + valor;
+                return true;
+            }
+        }
+        //public void SetSaldo (double valor)
+        //{
+        //    if(valor < 0)
+        //    {
+        //        return;
+        //    }
+        //    else
+        //    {
+        //        saldo = saldo + valor;
+        //    }
+        //}
+        //public double GetSaldo ()
+        //{
+        //    return saldo;
+        //}
+        public float Saldo
+        {
+            get
+            {
+                return saldo;
+            }
+            set
+            {
+                if (saldo < 0)
+                {
+                    return;
+                }
+                else
+                {
+                    saldo = value;
+                }
+            }
+        }
+
+    }
+
+}
